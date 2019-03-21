@@ -37,6 +37,7 @@
     go-mode
     markdown-mode
     yaml-mode
+    dockerfile-mode
     auto-complete
     flycheck
     undo-tree

@@ -3,3 +3,5 @@
 	name = thekuwayama
 [color]
 	ui = auto
+[alias]
+        graph = log --oneline --graph --decorate

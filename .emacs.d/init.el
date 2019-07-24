@@ -28,13 +28,18 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
              '("gnu" . "https://elpa.gnu.org/packages/") t)
 
 (require 'cl)
 (defvar my/favorite/el
   '(
     ruby-mode
+    ruby-end
+    rubocop
     go-mode
+    rust-mode
     markdown-mode
     yaml-mode
     dockerfile-mode

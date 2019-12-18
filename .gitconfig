@@ -5,3 +5,8 @@
 	ui = auto
 [alias]
         graph = log --oneline --graph --decorate
+[pager]
+# sudo ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+        log = diff-highlight | less
+        show = diff-highlight | less
+        diff = diff-highlight | less

@@ -3,10 +3,6 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
 
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 alias grep='grep --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'

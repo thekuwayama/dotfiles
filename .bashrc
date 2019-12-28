@@ -11,6 +11,8 @@ alias grep='grep --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias less='less -R'
+
 if [[ -x `which colordiff` ]]; then
     alias diff='colordiff -u'
 else

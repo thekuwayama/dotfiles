@@ -43,6 +43,7 @@
     markdown-mode
     yaml-mode
     dockerfile-mode
+    terraform-mode
     auto-complete
     flycheck
     undo-tree

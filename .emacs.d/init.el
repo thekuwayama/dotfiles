@@ -44,6 +44,7 @@
     yaml-mode
     dockerfile-mode
     terraform-mode
+    scala-mode
     auto-complete
     flycheck
     undo-tree

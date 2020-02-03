@@ -35,5 +35,4 @@ cask "alfred"
 cask "chromedriver"
 cask "docker"
 cask 'google-chrome'
-cask "iterm2"
 cask "wireshark"

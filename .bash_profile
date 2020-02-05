@@ -18,3 +18,4 @@ export PATH=$PATH:$GOPATH/bin
 export HISTTIMEFORMAT='%F %T '
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -u histappend
+export BASH_SILENCE_DEPRECATION_WARNING=1

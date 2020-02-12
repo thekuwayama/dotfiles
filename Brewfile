@@ -33,6 +33,7 @@ brew "wget"
 
 cask "alfred"
 cask "chromedriver"
+cask "clipy"
 cask "docker"
 cask 'google-chrome'
 cask "wireshark"

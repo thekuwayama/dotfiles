@@ -1,9 +1,10 @@
+tap "coursier/formulas"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 
 brew "colordiff"
-brew "coursier"
+brew "coursier/formulas/coursier"
 brew "curl"
 brew "dep"
 brew "docker", link: false
@@ -26,6 +27,7 @@ brew "readline", link: true
 brew "rbenv"
 brew "ruby"
 brew "ruby-build"
+brew "rustup"
 brew "tfenv"
 brew "tmux"
 brew "tree"

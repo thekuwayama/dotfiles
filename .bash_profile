@@ -7,7 +7,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 eval "$(rbenv init -)"
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
+source $HOME/.cargo/env
 
 # golang
 export GOROOT=/usr/local/opt/go/libexec

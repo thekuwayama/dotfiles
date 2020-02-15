@@ -28,4 +28,4 @@ export SPARK_HOME=/opt/spark
 export SPARK_DIST_CLASSPATH=$($HADOOP_HOME//bin/hadoop classpath)
 
 # gcp
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/google_application_credentials"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.google_application_credentials"

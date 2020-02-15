@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 brew "colordiff"
+brew "coursier"
 brew "curl"
 brew "dep"
 brew "docker", link: false

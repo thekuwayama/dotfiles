@@ -21,8 +21,6 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
-
-
 ;;; package
 (require 'package)
 (add-to-list 'package-archives
@@ -48,6 +46,9 @@
     auto-complete
     flycheck
     undo-tree
+    lsp-mode
+    lsp-ui
+    company-lsp
     ))
 
 (package-initialize)
@@ -60,3 +61,18 @@
       (expand-file-name "package-selected-packages.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+;;; language server
+(require 'lsp-mode)
+(require 'lsp-ui)
+(require 'company-lsp)
+
+;;; https://github.com/emacs-lsp/lsp-mode#supported-languages
+; gem install solargraph
+(add-hook 'ruby-mode-hook #'lsp)  
+; go get -u github.com/saibing/bingo
+(add-hook 'go-mode-hook #'lsp)
+; rustup update && rustup component add rls rust-analysis rust-src
+(add-hook 'rust-mode-hook #'lsp)
+; coursier bootstrap --java-opt -Xss4m --java-opt -Xms100m --java-opt -Dmetals.client=emacs org.scalameta:metals_2.12:0.8.0 -r bintray:scalacenter/releases -r sonatype:snapshots -o /usr/local/bin/metals-emacs -f
+(add-hook 'scala-mode-hook #'lsp)

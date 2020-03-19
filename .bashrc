@@ -1,9 +1,6 @@
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
 PS1='[\u \W$(__git_ps1 " (%s)")]\$ '
 
-alias grep='grep --color=always'
+alias cgrep='grep --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
@@ -55,3 +52,5 @@ function rmrm() {
 	return 0
     fi
 }
+
+alias date='LANG="C" date'

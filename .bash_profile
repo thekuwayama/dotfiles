@@ -14,6 +14,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# nodenv
+export PATH=$PATH:$HOME/.nodenv/bin
+eval "$(nodenv init -)"
+
 # history
 export HISTTIMEFORMAT='%F %T '
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -29,3 +33,9 @@ export SPARK_DIST_CLASSPATH=$($HADOOP_HOME//bin/hadoop classpath)
 
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.google_application_credentials"
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+
+# git
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash

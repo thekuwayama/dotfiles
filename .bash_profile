@@ -29,7 +29,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_HOME=/opt/hadoop
 export SPARK_HOME=/opt/spark
-export SPARK_DIST_CLASSPATH=$($HADOOP_HOME//bin/hadoop classpath)
+export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 
 # gcp
 export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.google_application_credentials"

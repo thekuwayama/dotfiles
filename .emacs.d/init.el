@@ -43,6 +43,7 @@
     dockerfile-mode
     terraform-mode
     scala-mode
+    protobuf-mode
     auto-complete
     flycheck
     undo-tree

@@ -18,6 +18,9 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.nodenv/bin
 eval "$(nodenv init -)"
 
+# scala
+export PATH="/usr/local/opt/scala@2.11/bin:$PATH"
+
 # history
 export HISTTIMEFORMAT='%F %T '
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -28,6 +31,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
 export PATH=${JAVA_HOME}/bin:${PATH}
 export HADOOP_HOME=/opt/hadoop
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 export SPARK_HOME=/opt/spark
 export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 

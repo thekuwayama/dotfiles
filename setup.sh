@@ -3,7 +3,7 @@
 dir=`pwd`
 
 echo 'Link dotfiles ...'
-for x in .tmux.conf .emacs.d .bashrc .bash_profile .gitconfig
+for x in .tmux.conf .emacs.d .bashrc .bash_profile .gemrc .gitconfig
 do
   if [ -h "$HOME/${x}" ]; then
       printf "%-30s: %s\n" "$HOME/${x}" "Symlink exists"

@@ -5,6 +5,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # rbenv
 eval "$(rbenv init -)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl`"
 
 # rust
 source $HOME/.cargo/env

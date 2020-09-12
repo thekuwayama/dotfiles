@@ -21,59 +21,91 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 
+
+
 ;;; package
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("gnu" . "https://elpa.gnu.org/packages/") t)
-
-(require 'cl)
-(defvar my/favorite/el
-  '(
-    ruby-mode
-    ruby-end
-    rubocop
-    go-mode
-    rust-mode
-    markdown-mode
-    yaml-mode
-    dockerfile-mode
-    terraform-mode
-    scala-mode
-    protobuf-mode
-    auto-complete
-    flycheck
-    undo-tree
-    lsp-mode
-    lsp-ui
-    company-lsp
-    ))
 
 (package-initialize)
-(unless package-archive-contents (package-refresh-contents))
-(dolist (package my/favorite/el)
-  (unless (package-installed-p package)
-    (package-install package)))
+(setq package-archives
+      '(("org" . "https://orgmode.org/elpa/")
+        ("melpa" . "https://melpa.org/packages/")
+        ("gnu" . "https://elpa.gnu.org/packages/")))
+
+(unless package-archive-contents
+  (package-refresh-contents))
 
 (setq custom-file
       (expand-file-name "package-selected-packages.el" user-emacs-directory))
 (when (file-exists-p custom-file)
   (load custom-file))
 
-;;; language server
-(require 'lsp-mode)
-(require 'lsp-ui)
-(require 'company-lsp)
 
-;;; https://github.com/emacs-lsp/lsp-mode#supported-languages
-; gem install solargraph
-(add-hook 'ruby-mode-hook #'lsp)  
-; go get -u github.com/saibing/bingo
-; (add-hook 'go-mode-hook #'lsp)
-; rustup update && rustup component add rls rust-analysis rust-src
-(add-hook 'rust-mode-hook #'lsp)
-; coursier bootstrap --java-opt -Xss4m --java-opt -Xms100m --java-opt -Dmetals.client=emacs org.scalameta:metals_2.12:0.8.0 -r bintray:scalacenter/releases -r sonatype:snapshots -o /usr/local/bin/metals-emacs -f
-(add-hook 'scala-mode-hook #'lsp)
+
+;;; use-package
+(when (not (package-installed-p 'use-package))
+  (package-install 'use-package))
+
+(require 'use-package)
+
+
+
+;;; ruby
+(use-package ruby-mode
+  :ensure t
+  :mode ("\\.rb$" "\\.gemspec$" "Rakefile" "Gemfile")
+  :interpreter "ruby"
+  :commands ruby-mode
+  :config
+  (add-hook 'ruby-mode-hook #'lsp)
+
+  (defun my-ruby-mode-hook ()
+    (use-package ruby-end)
+    (use-package rubocop)
+    (use-package ruby-block
+      :config
+      (ruby-block-mode t)
+      (setq ruby-block-highlight-toggle t))))
+
+;;; golang
+(use-package go-mode
+  :ensure t
+  :mode "\\.go$"
+  :commands go-mode
+  :config
+  (add-hook 'go-mode-hook #'lsp)
+  (setq gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save))
+
+;;; scala
+(use-package scala-mode
+  :ensure t
+  :mode "\\.s\\(cala\\|bt\\)$"
+  :commands scala-mode
+  :config
+  (add-hook 'scala-mode-hook #'lsp))
+
+(use-package lsp-metals
+  :config (setq lsp-metals-treeview-show-when-views-received t))
+
+;;; rust
+(use-package rust-mode
+  :ensure t
+  :commands rust-mode
+  :config
+  (add-hook 'rust-mode-hook #'lsp))
+
+
+
+;;; Language Server
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred))
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
+
+(use-package company-lsp
+  :ensure t
+  :commands company-lsp)

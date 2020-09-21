@@ -28,8 +28,8 @@ function check_os() {
 }
 
 function check_pwd() {
-    if [ "$(pwd)" != "$HOME" ];then
-        print_error "Sorrry, cd $HOME..."
+    if [ "$(pwd)" != "$HOME" ]; then
+        print_error "Sorry, cd $HOME..."
         exit 1
     fi
 }
@@ -86,7 +86,11 @@ function link_diffhighlight() {
     print_info "Link diff-highlight"
 
     if ! command -v diff-highlight >/dev/null 2>&1; then
-        # /usr/local/share/git-core is installed by `brew install git`
+        if [ ! -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+            # /usr/local/share/git-core is installed by `brew install git`
+            print_warn "Sorry, require diff-highlight..."
+            exit
+        fi
         sudo ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
         print_success "Success to link diff-highlight"
     else

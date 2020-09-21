@@ -1,5 +1,5 @@
 # dotfiles
 
 ```bash
-$ curl https://raw.githubusercontent.com/thekuwayama/dotfiles/master/setup.sh | sh
+$ curl -s https://raw.githubusercontent.com/thekuwayama/dotfiles/master/setup.sh | sh
 ```

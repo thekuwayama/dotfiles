@@ -25,6 +25,7 @@ brew "peco"
 brew "python"
 brew "readline", link: true
 brew "rbenv"
+brew "ripgrep"
 brew "ruby"
 brew "ruby-build"
 brew "rustup"

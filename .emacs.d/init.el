@@ -77,6 +77,11 @@
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save))
 
+(use-package flycheck-golangci-lint
+  :ensure t
+  :if (executable-find "golangci-lint")
+  :hook (go-mode . flycheck-golangci-lint-setup))
+
 ;;; scala
 (use-package scala-mode
   :ensure t
@@ -86,7 +91,8 @@
   (add-hook 'scala-mode-hook #'lsp))
 
 (use-package lsp-metals
-  :config (setq lsp-metals-treeview-show-when-views-received t))
+  :config
+  (setq lsp-metals-treeview-show-when-views-received t))
 
 ;;; rust
 (use-package rust-mode

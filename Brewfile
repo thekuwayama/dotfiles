@@ -42,3 +42,4 @@ cask "docker"
 cask "firefox"
 cask 'google-chrome'
 cask "wireshark"
+cask "google-cloud-sdk"

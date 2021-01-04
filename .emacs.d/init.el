@@ -87,8 +87,7 @@
   :ensure t
   :mode "\\.s\\(cala\\|bt\\)$"
   :commands scala-mode
-  :config
-  (add-hook 'scala-mode-hook #'lsp))
+  :config (add-hook 'scala-mode-hook #'lsp))
 
 (use-package lsp-metals
   :config
@@ -97,9 +96,12 @@
 ;;; rust
 (use-package rust-mode
   :ensure t
+  :mode "\\.rs$"
   :commands rust-mode
-  :config
-  (add-hook 'rust-mode-hook #'lsp))
+  :custom rust-format-on-save t
+  :config (add-hook 'rust-mode-hook #'lsp))
+
+(add-to-list 'exec-path (expand-file-name "$HOME/.cargo/bin"))
 
 
 
@@ -108,15 +110,14 @@
 
 (use-package lsp-mode
   :ensure t
-  :commands (lsp lsp-deferred))
+  :commands (lsp lsp-deferred)
+  :custom (lsp-rust-server 'rust-analyzer))
 
 (use-package lsp-ui
-  :ensure t
-  :commands lsp-ui-mode)
+  :ensure t)
 
 (use-package company-lsp
-  :ensure t
-  :commands company-lsp)
+  :ensure t)
 
 
 

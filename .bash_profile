@@ -45,3 +45,8 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.in
 # git
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# mcfly
+if [[ -r "/usr/local/opt/mcfly/mcfly.bash" ]]; then
+    source "/usr/local/opt/mcfly/mcfly.bash"
+fi

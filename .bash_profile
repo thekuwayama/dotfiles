@@ -50,3 +50,6 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 if [[ -r "/usr/local/opt/mcfly/mcfly.bash" ]]; then
     source "/usr/local/opt/mcfly/mcfly.bash"
 fi
+
+# argo
+export ARGO_SERVER=localhost:2746

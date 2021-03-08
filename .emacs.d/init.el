@@ -126,5 +126,6 @@
   :ensure t
   :bind (("M-g o" . dumb-jump-go-other-window)
          ("M-g j" . dumb-jump-go)
+         ("M-g e" . dumb-jump-go-prefer-external)
          ("M-g b" . dumb-jump-back))
   :config (setq dumb-jump-selector 'helm))

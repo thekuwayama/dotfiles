@@ -9,6 +9,7 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=`brew --prefix openssl`"
 
 # rust
 source $HOME/.cargo/env
+export RUSTC_WRAPPER=$(which sccache)
 
 # golang
 export GOROOT=/usr/local/opt/go/libexec

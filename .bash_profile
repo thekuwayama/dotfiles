@@ -49,6 +49,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # mcfly
 eval "$(mcfly init bash)"
+export MCFLY_FUZZY=true
 
 # argo
 export ARGO_SERVER=localhost:2746

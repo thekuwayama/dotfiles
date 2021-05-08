@@ -124,8 +124,23 @@
 ;;; jump
 (use-package dumb-jump
   :ensure t
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g e" . dumb-jump-go-prefer-external)
-         ("M-g b" . dumb-jump-back))
+  :bind (("M-g j" . dumb-jump-go)
+         ("M-g b" . dumb-jump-back)
+         ("M-g o" . dumb-jump-go-other-window)
+         ("M-g e" . dumb-jump-go-prefer-external))
   :config (setq dumb-jump-selector 'helm))
+
+
+
+;;; snippet
+(use-package yasnippet)
+
+
+
+;;; neotree
+(use-package neotree
+  :config
+  (setq neo-show-hidden-files t)
+  (setq neo-smart-open t)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  (bind-key "M-g t" 'neotree-toggle))

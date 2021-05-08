@@ -87,10 +87,12 @@
   :ensure t
   :mode "\\.s\\(cala\\|bt\\)$"
   :commands scala-mode
-  :config (add-hook 'scala-mode-hook #'lsp))
+  :config
+  (add-hook 'scala-mode-hook #'lsp))
 
 (use-package lsp-metals
   :config
+  (setq lsp-prefer-flymake nil)
   (setq lsp-metals-treeview-show-when-views-received t))
 
 ;;; rust
@@ -106,12 +108,12 @@
 
 
 ;;; Language Server
-(setq lsp-enable-file-watchers nil)
-
 (use-package lsp-mode
   :ensure t
   :commands (lsp lsp-deferred)
-  :custom (lsp-rust-server 'rust-analyzer))
+  :custom
+  (lsp-rust-server 'rust-analyzer)
+  (setq lsp-enable-file-watchers nil))
 
 (use-package lsp-ui
   :ensure t)

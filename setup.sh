@@ -56,7 +56,7 @@ function download_dotfiles() {
 function link_dotfiles() {
     print_info "Link dotfiles"
 
-    for x in .tmux.conf .emacs.d .bashrc .bash_profile .gemrc .gitconfig
+    for x in .bashrc .bash_profile .emacs.d .gemrc .gitconfig .irbrc .tmux.conf 
     do
         if [ -h "$HOME/${x}" ]; then
             print_warn "$HOME/${x}: already linked"

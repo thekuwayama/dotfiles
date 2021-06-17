@@ -40,7 +40,6 @@ export SPARK_HOME=/opt/spark
 export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 
 # gcp
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/gcloud/application_default_credentials.json"
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
 

@@ -54,3 +54,6 @@ export MCFLY_RESULTS=50
 
 # argo
 export ARGO_SERVER=localhost:2746
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

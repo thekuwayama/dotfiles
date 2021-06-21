@@ -131,6 +131,12 @@
 
 
 
+;;; company
+(use-package company
+  :ensure t)
+
+
+
 ;;; snippet
 (use-package yasnippet)
 

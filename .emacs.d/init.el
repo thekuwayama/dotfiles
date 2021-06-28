@@ -113,7 +113,8 @@
   :commands (lsp lsp-deferred)
   :custom
   (lsp-rust-server 'rust-analyzer)
-  (setq lsp-enable-file-watchers nil))
+  (lsp-enable-file-watchers nil)
+  (lsp-file-watch-threshold 2000))
 
 (use-package lsp-ui
   :ensure t)

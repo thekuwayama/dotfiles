@@ -56,3 +56,6 @@ export ARGO_SERVER=localhost:2746
 
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# git peckout
+export PATH=$HOME/git-peckout:$PATH

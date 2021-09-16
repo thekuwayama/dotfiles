@@ -1,0 +1,4 @@
+#!/bin/bash
+set -C
+
+git checkout $(git branch | peco)

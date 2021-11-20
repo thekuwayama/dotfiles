@@ -34,6 +34,12 @@ function check_pwd() {
     fi
 }
 
+function change_login_shell() {
+    if [[ "$SHELL" != "/bin/bash" ]]; then
+        chsh -s /bin/bash
+    fi
+}
+
 DOTFILES_PATH="$(pwd)/dotfiles"
 
 function download_dotfiles() {
@@ -106,6 +112,8 @@ function main() {
     link_dotfiles
     brew_bundle
     link_diffhighlight
+
+    change_login_shell
 }
 
 main

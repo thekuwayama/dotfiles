@@ -93,7 +93,8 @@
 (use-package lsp-metals
   :config
   (setq lsp-prefer-flymake nil)
-  (setq lsp-metals-treeview-show-when-views-received t))
+  (setq lsp-metals-treeview-show-when-views-received t)
+  :hook (lsp-mode . lsp-lens-mode))
 
 ;;; rust
 (use-package rust-mode

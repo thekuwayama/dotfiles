@@ -52,8 +52,8 @@ function download_dotfiles() {
         if command -v git >/dev/null 2>&1; then
             git clone git@github.com:thekuwayama/dotfiles.git
         else
-            curl -sL https://github.com/thekuwayama/dotfiles/archive/master.tar.gz | tar xz
-            mv dotfiles-master dotfiles
+            curl -sL https://github.com/thekuwayama/dotfiles/archive/main.tar.gz | tar xz
+            mv dotfiles-main dotfiles
         fi
         print_success "Success to download dotfiles"
     fi

@@ -106,6 +106,11 @@
 
 (add-to-list 'exec-path (expand-file-name "$HOME/.cargo/bin"))
 
+;;; ts
+(use-package web-mode
+  :ensure t
+  :mode "\\.[jt]sx")
+
 
 
 ;;; Language Server

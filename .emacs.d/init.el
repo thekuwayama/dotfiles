@@ -109,7 +109,7 @@
 ;;; ts
 (use-package web-mode
   :ensure t
-  :mode "\\.[jt]sx")
+  :mode "\\.[jt]sx?")
 
 
 

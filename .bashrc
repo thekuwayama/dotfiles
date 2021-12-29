@@ -54,3 +54,4 @@ function rmrm() {
 }
 
 alias date='LANG="C" date'
+alias asaru='asaru $(cat $HOME/.asaru/workspace_gid) $(cat $HOME/.asaru/pats) $HOME/.asaru/tmp && cat $HOME/.asaru/tmp | xargs open && rm -f $HOME/.asaru/tmp'

@@ -99,10 +99,16 @@
 ;;; rust
 (use-package rust-mode
   :ensure t
-  :mode "\\.rs$"
-  :commands rust-mode
-  :custom rust-format-on-save t
-  :config (add-hook 'rust-mode-hook #'lsp))
+  :config
+  (setq rust-format-on-save t)
+  (add-hook 'rust-mode-hook #'lsp))
+
+(use-package flycheck-rust)
+
+(use-package racer
+  :init
+  (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'racer-mode-hook #'eldoc-mode))
 
 (add-to-list 'exec-path (expand-file-name "$HOME/.cargo/bin"))
 

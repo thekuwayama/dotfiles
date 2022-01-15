@@ -107,8 +107,7 @@
 
 (use-package racer
   :init
-  (add-hook 'rust-mode-hook #'racer-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode))
+  (add-hook 'rust-mode-hook #'racer-mode))
 
 (add-to-list 'exec-path (expand-file-name "$HOME/.cargo/bin"))
 

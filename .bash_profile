@@ -37,14 +37,6 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 export SPARK_HOME=/opt/spark
 export SPARK_DIST_CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath)
 
-# gcp
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
-
-# git
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
 # mcfly
 eval "$(mcfly init bash)"
 export MCFLY_FUZZY=true
@@ -58,3 +50,14 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # git peckout
 export PATH=$HOME/git-peckout:$PATH
+
+# todo(completion)
+source /usr/local/etc/bash_completion.d/todo.bash
+
+# gcp(completion)
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+
+# git(completion)
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash

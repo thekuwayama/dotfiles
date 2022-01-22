@@ -5,6 +5,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 brew "argo"
+brew "bash-completion@2"
 brew "colordiff"
 brew "coursier/formulas/coursier"
 brew "curl"

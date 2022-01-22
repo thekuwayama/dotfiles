@@ -104,6 +104,12 @@ function link_diffhighlight() {
     fi
 }
 
+function todo_completion() {
+    if [ ! -f "$HOME/.todo.bash" ]; then
+        wget https://raw.githubusercontent.com/thekuwayama/todo/main/todo.bash -O $HOME/.todo.bash
+    fi
+}
+
 function main() {
     check_os
     check_pwd
@@ -112,6 +118,7 @@ function main() {
     link_dotfiles
     brew_bundle
     link_diffhighlight
+    todo_completion
 
     change_login_shell
 }

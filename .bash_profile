@@ -1,7 +1,7 @@
 source ~/.bashrc
 
 # openssl
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/usr/local/opt/openssl/bin:$PATH
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -42,6 +42,9 @@ eval "$(mcfly init bash)"
 export MCFLY_FUZZY=true
 export MCFLY_RESULTS=50
 
+# kubectl
+source <(kubectl completion bash)
+
 # argo
 export ARGO_SERVER=localhost:2746
 
@@ -51,13 +54,16 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # git peckout
 export PATH=$HOME/git-peckout:$PATH
 
-# todo(completion)
-source /usr/local/etc/bash_completion.d/todo.bash
+# bash-completion@2
+source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
-# gcp(completion)
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+# todo
+source $HOME/.todo.bash
 
-# git(completion)
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+# gcp
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+
+# git
+source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
+source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"

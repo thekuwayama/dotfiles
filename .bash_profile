@@ -67,3 +67,6 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.
 # git
 source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
 source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
+
+# mysql 5.7
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"

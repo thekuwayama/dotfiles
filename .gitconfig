@@ -1,5 +1,5 @@
 [user]
-	email = thekuwayama@gmail.com
+	ema il = thekuwayama@gmail.com
 	name = thekuwayama
 [color]
 	ui = auto
@@ -18,3 +18,4 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/.git-templates/git-secrets/
+        defaultBranch = main

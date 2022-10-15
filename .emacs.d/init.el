@@ -58,6 +58,7 @@
   :commands ruby-mode
   :config
   (add-hook 'ruby-mode-hook #'lsp)
+  (add-hook 'ruby-mode-hook 'company-mode)
 
   (defun my-ruby-mode-hook ()
     (use-package ruby-end)
@@ -73,9 +74,9 @@
   :mode "\\.go$"
   :commands go-mode
   :config
-  (add-hook 'go-mode-hook #'lsp)
-  (setq gofmt-command "goimports")
-  (add-hook 'before-save-hook 'gofmt-before-save))
+  (add-hook 'before-save-hook #'gofmt-before-save)
+  (add-hook 'go-mode-hook 'company-mode)
+  (add-hook 'go-mode-hook #'lsp))
 
 (use-package flycheck-golangci-lint
   :ensure t
@@ -88,7 +89,8 @@
   :mode "\\.s\\(cala\\|bt\\)$"
   :commands scala-mode
   :config
-  (add-hook 'scala-mode-hook #'lsp))
+  (add-hook 'scala-mode-hook #'lsp)
+  (add-hook 'scala-mode-hook 'company-mode))
 
 (use-package lsp-metals
   :config
@@ -101,7 +103,8 @@
   :ensure t
   :config
   (setq rust-format-on-save t)
-  (add-hook 'rust-mode-hook #'lsp))
+  (add-hook 'rust-mode-hook #'lsp)
+  (add-hook 'rust-mode-hook 'company-mode))
 
 (use-package flycheck-rust)
 

@@ -92,12 +92,12 @@ function link_diffhighlight() {
     print_info "Link diff-highlight"
 
     if ! command -v diff-highlight >/dev/null 2>&1; then
-        if [ ! -e /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
-            # /usr/local/share/git-core is installed by `brew install git`
+        if [ ! -e /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+            # /opt/homebrew/share/git-core is installed by `brew install git`
             print_warn "Sorry, require diff-highlight..."
             exit
         fi
-        sudo ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+        sudo ln -s /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
         print_success "Success to link diff-highlight"
     else
         print_warn "diff-highlight: already linked"

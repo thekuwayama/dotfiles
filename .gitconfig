@@ -19,3 +19,5 @@
 [init]
 	templatedir = ~/.git-templates/git-secrets/
         defaultBranch = main
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com

@@ -78,6 +78,8 @@
   (add-hook 'go-mode-hook 'company-mode)
   (add-hook 'go-mode-hook #'lsp))
 
+(setq gofmt-command "goimports")
+
 (use-package flycheck-golangci-lint
   :ensure t
   :if (executable-find "golangci-lint")

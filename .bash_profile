@@ -5,8 +5,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_NO_INSTALL_CLEANUP=TRUE
 
 # rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
+
+# nodenv
+eval "$(nodenv init -)"
 
 # rust
 export PATH=$HOME/.cargo/bin:$PATH

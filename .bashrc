@@ -54,4 +54,5 @@ function rmrm() {
 }
 
 alias date='LANG="C" date'
+alias rcolor='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g"'
 alias asaru='asaru $(cat $HOME/.asaru/workspace_gid) $(cat $HOME/.asaru/pats) $HOME/.asaru/tmp && cat $HOME/.asaru/tmp | xargs open && rm -f $HOME/.asaru/tmp'

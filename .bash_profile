@@ -10,6 +10,9 @@ eval "$(rbenv init -)"
 # nodenv
 eval "$(nodenv init -)"
 
+# direnv
+eval "$(direnv hook bash)"
+
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
 

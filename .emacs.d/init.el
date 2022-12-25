@@ -110,10 +110,6 @@
 
 (use-package flycheck-rust)
 
-(use-package racer
-  :init
-  (add-hook 'rust-mode-hook #'racer-mode))
-
 (add-to-list 'exec-path (expand-file-name "$HOME/.cargo/bin"))
 
 ;;; ts

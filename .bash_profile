@@ -15,6 +15,7 @@ eval "$(direnv hook bash)"
 
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
+source $HOME/.cargo/env
 
 # golang
 export GOROOT=/opt/homebrew/opt/go/libexec

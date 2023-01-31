@@ -48,3 +48,6 @@ export PATH="$(brew --prefix)/opt/mysql@5.7/bin:$PATH"
 
 # utils
 export PATH=$HOME/hack:$PATH
+
+# openssl
+export PATH="$(brew --prefix openssl)/bin:$PATH"

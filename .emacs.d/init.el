@@ -117,6 +117,12 @@
   :ensure t
   :mode "\\.[jt]sx?")
 
+;;; python
+(use-package python-mode
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook #'lsp))
+
 
 
 ;;; Language Server
@@ -162,3 +168,10 @@
   (setq neo-smart-open t)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   (bind-key "M-g t" 'neotree-toggle))
+
+
+
+;;; github-browse-file
+(use-package github-browse-file
+  :config
+  (setq github-browse-file-show-line-at-point t))

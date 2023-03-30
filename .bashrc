@@ -17,6 +17,10 @@ alias ll='ls -alhG'
 alias la='ls -A'
 
 alias emacs='emacs -nw'
+alias roemacs='roemacs'
+function roemacs() {
+    emacs $@ -nw --eval '(read-only-mode 1)'
+}
 
 alias rm='set -f; rmrm'
 function rmrm() {
@@ -55,4 +59,3 @@ function rmrm() {
 
 alias date='LANG="C" date'
 alias rcolor='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g"'
-alias asaru='asaru $(cat $HOME/.asaru/workspace_gid) $(cat $HOME/.asaru/pats) $HOME/.asaru/tmp && cat $HOME/.asaru/tmp | xargs open && rm -f $HOME/.asaru/tmp'

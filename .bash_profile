@@ -51,3 +51,8 @@ export PATH=$HOME/hack:$PATH
 
 # openssl
 export PATH="$(brew --prefix openssl)/bin:$PATH"
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$(brew --prefix openssl)/lib/pkgconfig"
+
+# sdkman
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"

@@ -53,6 +53,5 @@ export PATH=$HOME/hack:$PATH
 export PATH="$(brew --prefix openssl)/bin:$PATH"
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$(brew --prefix openssl)/lib/pkgconfig"
 
-# sdkman
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# java
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)

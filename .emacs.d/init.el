@@ -17,6 +17,10 @@
 ;;; scroll
 (setq scroll-step 1)
 
+;;; disable line-wrapping
+(set-default 'truncate-lines t)
+(setq truncate-partial-width-windows t)
+
 ;;; Japanese
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)

@@ -18,7 +18,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 source $HOME/.cargo/env
 
 # golang
-export GOROOT=/opt/homebrew/opt/go/libexec
+export GOROOT="$(brew --prefix golang)/libexec"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 

@@ -37,7 +37,7 @@ export MCFLY_RESULTS=50
 export PATH=$HOME/git-peckout:$PATH
 
 # todo
-source $HOME/.todo.bash
+eval "$(todo completion)"
 
 # git
 source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"

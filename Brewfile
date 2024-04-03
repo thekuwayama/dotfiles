@@ -7,6 +7,7 @@ tap "homebrew/core"
 brew "bash-completion@2"
 brew "colordiff"
 brew "curl"
+brew "difftastic"
 brew "docker", link: false
 brew "emacs"
 brew "gibo"

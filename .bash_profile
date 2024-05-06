@@ -56,3 +56,6 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$(brew --prefix openssl)/lib/pkgconfig"
 
 # java
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+
+# aqua
+export PATH="$(aqua root-dir)/bin:$PATH"

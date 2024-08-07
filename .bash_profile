@@ -44,8 +44,8 @@ source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
 source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
 export GIT_PAGER=delta
 
-# mysql 5.7
-export PATH="$(brew --prefix)/opt/mysql@5.7/bin:$PATH"
+# mysql
+export PATH="$(brew --prefix)/opt/mysql/bin:$PATH"
 
 # utils
 export PATH=$HOME/hack:$PATH

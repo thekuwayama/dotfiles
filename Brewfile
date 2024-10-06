@@ -33,6 +33,7 @@ brew "rust-analyzer"
 brew "tfenv"
 brew "tmux"
 brew "tree"
+brew "uv"
 brew "watch"
 brew "wget"
 

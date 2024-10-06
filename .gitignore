@@ -4,4 +4,5 @@
 .emacs.d/elpa/
 .emacs.d/network-security.data
 .emacs.d/.lsp-session-v1
+.emacs.d/projects
 Brewfile.lock.json
